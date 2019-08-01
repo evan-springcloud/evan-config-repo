@@ -1,6 +1,6 @@
 server:
   tomcat:
-    uri-encoding: UTF-8
+    uri-encoding: UTF-16
 
 spring:
   jackson:
