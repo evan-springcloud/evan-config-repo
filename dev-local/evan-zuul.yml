@@ -6,7 +6,7 @@ management:  #actuator
 
 ---
 spring:
-  profiles: single
+  profiles: 8021
 
 server:
   port: 8021
@@ -17,22 +17,11 @@ management:
 
 ---
 spring:
-  profiles: ha-8022
+  profiles: 8022
 
-  server:
-    port: 8022
+server:
+  port: 8022
 
 management:
   server:
     port: 8028
-
----
-spring:
-  profiles: ha-8023
-
-server:
-  port: 8021
-
-management:
-  server:
-    port: 8029
