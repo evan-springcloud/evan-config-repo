@@ -1,0 +1,29 @@
+management:  #actuator
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #打开全部请求端点
+
+---
+spring:
+  profiles: single
+
+management:
+  server:
+    port: 8037
+
+---
+spring:
+  profiles: ha-8032
+
+management:
+  server:
+    port: 8038
+
+---
+spring:
+  profiles: ha-8033
+
+management:
+  server:
+    port: 8037
