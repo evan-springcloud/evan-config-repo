@@ -1,0 +1,23 @@
+spring:
+  redis:
+    host: 47.96.89.84
+    #host: 127.0.0.1
+    port: 6379
+    password: MiZhi001
+    pool:
+      max-idle: 2
+      min-idle: 2
+      max-active: 2
+      max-wait: 2000
+  jackson:
+    default-property-inclusion: non_null
+  mvc:
+    throw-exception-if-no-handler-found: true
+  output:
+    ansi:
+      enabled: detect
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
