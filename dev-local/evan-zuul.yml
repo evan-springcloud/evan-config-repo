@@ -5,7 +5,7 @@ management:  #actuator
         include: "*"  #打开全部请求端点
 
 ribbon:
-  ConnectTimeout: 1000
+  ConnectTimeout: 500
   ReadTimeout: 45000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 1
