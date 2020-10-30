@@ -4,24 +4,21 @@ management:  #actuator
       exposure:
         include: "*"  #打开全部请求端点
 
----
-spring:
-  profiles: 8021
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 45000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  retryableStatusCodes: 500,502,503
+  eureka:
+    enabled: true
 
-server:
-  port: 8021
-
-management:
-  server:
-    port: 8027
-
----
-spring:
-  profiles: 8022
-
-server:
-  port: 8022
-
-management:
-  server:
-    port: 8028
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 100000
